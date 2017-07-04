@@ -1,2 +1,4 @@
 # AndroidWithMicrosoftSQLserverandFTPClient
 Upload a file from android to FTP server and insertion of MetaData in Microsoft SQL SERVER
+
+Idea for thsi project is to send a file (image, Video ) from your androd phone to media base in your company (TV, Media Producton, News Web site , ...) to be used in the instantly or later, the file will uploaded to FTP server and insertion of metadata (Owner, Reporter, Description, note ,...) about the file, and in the other side there is a media browser for broswing files and their metadata.
