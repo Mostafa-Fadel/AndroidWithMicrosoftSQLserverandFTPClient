@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Firebase Web Basics</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/939e9dd52c.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+  <h4> Download file:</h4>
+  <button onclick="download()">Download!</button>
+<br>
+<br>
+  <script>
+
+function download(){
+   const file_url = 'https://firebasestorage.googleapis.com/v0/b/fireapp4-1c808.appspot.com/o/4.jpg?alt=media&token=b05f4cfe-1d99-4e24-90f4-fd36a17e2b51';
+   var el = document.createElement('a');
+   el.download = file_url;
+   el.href = file_url;
+   document.body.appendChild(el);
+   el.click();
+   el.remove();
+}
+   
+   </script>
+   
+
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js">
+</script>
+<div id = "console">
+</div>
+ 
+<br>
+
+ <SCRIPT >
+ var config = {
+    apiKey: "AIzaSyC4YGmpwU1bKpuq2_YaR49XWfpT_rwISW0",
+    authDomain: "fireapp4-1c808.firebaseapp.com",
+    databaseURL: "https://fireapp4-1c808.firebaseio.com",
+    projectId: "fireapp4-1c808",
+    storageBucket: "fireapp4-1c808.appspot.com",
+    messagingSenderId: "606856819967"
+  };
+
+
+
+   
+	
+  firebase.initializeApp(config);
+  var console = document.getElementById('console'); 
+  var database = firebase.database();
+  var fruitRef = database.ref().child('fruit');
+ var key =  fruitRef.push().key;
+ var update ={};
+ update[key] = {
+ name:'dddd',
+ color:'eeee'
+  };
+ fruitRef.update(update)
+ .then(function(){
+ console.innerHTML='reccord uploded to database.';
+ })
+ .catch(function(error) {
+ console.innerHTML='error!'+error;
+ }) ;
+ 
+</SCRIPT>
+
+
+<br>
+	<div class="mainDiv" align="left">
+		<h1 align="left">Firebase File Upload</h1>
+		<progress id="uploader" value="0" max="100">0%</progress>
+		<input type="file" id="fileButton" value="upload"/>
+	</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC4YGmpwU1bKpuq2_YaR49XWfpT_rwISW0",
+    authDomain: "fireapp4-1c808.firebaseapp.com",
+    databaseURL: "https://fireapp4-1c808.firebaseio.com",
+    projectId: "fireapp4-1c808",
+    storageBucket: "fireapp4-1c808.appspot.com",
+    messagingSenderId: "606856819967"
+  };
+  firebase.initializeApp(config);
+  //-------------------------------------
+  
+  var uploader = document.getElementById('uploader');
+  var fileButton = document.getElementById('fileButton');
+  fileButton.addEventListener('change', function(e){
+  var file = e.target.files[0];
+  var storageRef = firebase.storage().ref('walid/'+file.name);
+  var task = storageRef.put(file);
+  task.on('state_changed', function progress(snapshot) {
+    var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+    uploader.value = percentage;
+
+  }, function error(err) {
+
+
+  },function complete() {
+
+  });
+});  
+  
+  
+</script>
+
+<script src="fileup.js">
+</script> 
+  </body>
+</html>
