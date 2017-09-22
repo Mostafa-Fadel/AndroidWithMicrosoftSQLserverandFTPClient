@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#7884d1"
+    android:padding="10dp"
+    tools:context="fadel.mfadel.app1test.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="M. M. FADEL"
+            android:typeface="sans"
+            android:textSize="35sp"
+            android:textColor="#6b082e"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textColorHint="#ffffff"
+            android:background="#5d5d5d"
+            android:padding="10dp"
+            android:hint="USER ID"
+            android:textSize="20sp"
+            android:id="@+id/edtuserid" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="PASSWORD"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textStyle="bold"
+            android:background="#5d5d5d"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="5dp"
+            android:id="@+id/edtpass" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="#ffffff"
+
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:id="@+id/btnlogin"
+            android:text="Login"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/pbbar" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

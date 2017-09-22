@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#7884d1"
+    tools:context="fadel.mfadel.app1test.EditActivity">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:id="@+id/btnUpload"
+        android:text="Upload"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textColorHint="#ffffff"
+        android:background="#5d5d5d"
+        android:padding="10dp"
+        android:hint="Owner"
+        android:textSize="20sp"
+        android:id="@+id/edtowner"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/edttitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textColorHint="#ffffff"
+        android:background="#5d5d5d"
+        android:padding="10dp"
+        android:hint="Title"
+        android:textSize="20sp"
+        android:id="@+id/edttitle"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btnBrowse"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textColorHint="#ffffff"
+        android:background="#5d5d5d"
+        android:padding="10dp"
+        android:hint="Note"
+        android:textSize="20sp"
+        android:id="@+id/edtnote"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/edtdescription"
+        android:layout_above="@+id/btnUpload"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:textColor="#ffffff"
+    android:textStyle="bold"
+    android:textColorHint="#ffffff"
+    android:background="#5d5d5d"
+    android:padding="10dp"
+    android:hint="Description"
+    android:textSize="20sp"
+    android:id="@+id/edtdescription"
+    android:layout_marginTop="5dp"
+    android:layout_below="@+id/edtowner"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/txtPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btnBrowse"
+        android:textColor="#aaeedd"
+        android:textSize="30dp" />
+
+    <EditText
+        android:text=" Select File ..."
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/txtselectedfile"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imagepreview"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:src="@drawable/play1"
+        android:layout_weight="0.19"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:id="@+id/btnBrowse"
+        android:text="Select Item"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+    //android:entries="@array/myarray
+</RelativeLayout>
