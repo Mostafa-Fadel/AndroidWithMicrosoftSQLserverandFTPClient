@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Fire Base First APP</string>
+
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_link_to_login">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="err_msg_required">Error</string>
+
+
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_link_to_register">Not a member? Get registered in Firebase now!</string>
+
+    <string name="btn_forgot_password">Forgot your password?</string>
+    <string name="hint_email">Email</string>
+
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+    <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
+
+
+    <string name="btn_submit_text">Submit</string>
+    <string name="btn_view_text">Preview</string>
+    <string name="btn_select_item">Select Item</string>
+
+    <string name="hint_title">Title</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_note">Note</string>
+    <string name="title_activity_custom_view_data">CustomViewData</string>
+</resources>
